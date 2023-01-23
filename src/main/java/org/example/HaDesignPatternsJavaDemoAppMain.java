@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.designpatterns.creationalpatterns.singleton.SingletonDemo;
 import org.example.solid.singleresponsibility.compliance.SingleResponsibilityDemo;
 
 import java.io.IOException;
@@ -16,10 +17,13 @@ public class HaDesignPatternsJavaDemoAppMain {
         }*/
 
         // Demonstration of Single Responsibility Principle
-        try {
+        /*try {
             SingleResponsibilityDemo.contactController();
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }
+        }*/
+
+        // Singleton demo
+        SingletonDemo.demoSingleton();
     }
 }
