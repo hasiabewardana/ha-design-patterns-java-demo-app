@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.designpatterns.creationalpatterns.factory.FactoryDemo;
 import org.example.designpatterns.creationalpatterns.singleton.SingletonDemo;
 import org.example.solid.singleresponsibility.compliance.SingleResponsibilityDemo;
 
@@ -23,7 +24,13 @@ public class HaDesignPatternsJavaDemoAppMain {
             throw new RuntimeException(e);
         }*/
 
+        // Design patterns
+        // Creational patterns
+
         // Singleton demo
-        SingletonDemo.demoSingleton();
+        // SingletonDemo.demoSingletonPattern();
+
+        // Factory demo
+        FactoryDemo.demoFactoryPattern();
     }
 }
