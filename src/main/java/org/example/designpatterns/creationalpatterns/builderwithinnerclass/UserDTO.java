@@ -1,9 +1,6 @@
 package org.example.designpatterns.creationalpatterns.builderwithinnerclass;
 
 import org.example.designpatterns.creationalpatterns.builder.Address;
-import org.example.designpatterns.creationalpatterns.builder.UserDTOBuilder;
-import org.example.designpatterns.creationalpatterns.builder.UserWebDTO;
-import org.example.designpatterns.creationalpatterns.builder.UserWebDTOBuilder;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -13,6 +10,11 @@ public class UserDTO {
     private String name;
     private String address;
     private String age;
+
+    //Get builder instance
+    public static UserDTOBuilder getBuilder() {
+        return new UserDTOBuilder();
+    }
 
     public String getName() {
         return name;
@@ -45,13 +47,8 @@ public class UserDTO {
                 ", age='" + age + '\'';
     }
 
-    //Get builder instance
-    public static UserDTOBuilder getBuilder(){
-        return new UserDTOBuilder();
-    }
-
     //Builder
-    public static class UserDTOBuilder{
+    public static class UserDTOBuilder {
         private String firstName;
         private String lastName;
         private String age;
@@ -76,7 +73,7 @@ public class UserDTO {
 
         public UserDTOBuilder withAddress(Address address) {
             this.address = address.getHouseNumber() + ", " + address.getStreet()
-                    + "\n" +address.getCity() + "\n" + address.getState() + " " + address.getZipCode();
+                    + "\n" + address.getCity() + "\n" + address.getState() + " " + address.getZipCode();
             return this;
         }
 
