@@ -30,7 +30,10 @@ public class HaDesignPatternsJavaDemoAppMain {
         // Creational patterns
 
         //Builder demo
-        Client.demoBuilder();
+        //Client.demoBuilder();
+
+        //Builder with inner class demo
+        org.example.designpatterns.creationalpatterns.builderwithinnerclass.Client.demoBuilderWithInnerClass();
 
         // Singleton demo
         // SingletonDemo.demoSingletonPattern();
