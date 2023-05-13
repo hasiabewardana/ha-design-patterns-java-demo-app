@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.designpatterns.creationalpatterns.abstractfactory.AbstractFactoryDemo;
+import org.example.designpatterns.creationalpatterns.builder.Client;
 import org.example.designpatterns.creationalpatterns.factory.FactoryDemo;
 import org.example.designpatterns.creationalpatterns.singleton.SingletonDemo;
 import org.example.solid.singleresponsibility.compliance.SingleResponsibilityDemo;
@@ -28,13 +29,16 @@ public class HaDesignPatternsJavaDemoAppMain {
         // Design patterns
         // Creational patterns
 
+        //Builder demo
+        Client.demoBuilder();
+
         // Singleton demo
         // SingletonDemo.demoSingletonPattern();
 
         // Factory demo
-        // FactoryDemo.demoFactoryPattern();
+        //FactoryDemo.demoFactoryPattern();
 
         // Abstract factory demo
-        AbstractFactoryDemo.demoAbstractFactory();
+        //AbstractFactoryDemo.demoAbstractFactory();
     }
 }
