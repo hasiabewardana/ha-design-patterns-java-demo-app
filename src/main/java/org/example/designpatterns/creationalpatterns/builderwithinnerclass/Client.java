@@ -2,14 +2,12 @@ package org.example.designpatterns.creationalpatterns.builderwithinnerclass;
 
 import org.example.designpatterns.creationalpatterns.builder.Address;
 import org.example.designpatterns.creationalpatterns.builder.User;
-import org.example.designpatterns.creationalpatterns.builder.UserDTOBuilder;
-import org.example.designpatterns.creationalpatterns.builder.UserWebDTOBuilder;
 
 import java.time.LocalDate;
 
 //This is our client which also works as our director
 public class Client {
-    public static User createUser(){
+    public static User createUser() {
         User user = new User();
         user.setFirstName("John");
         user.setLastName("Smith");
@@ -28,7 +26,7 @@ public class Client {
     }
 
     //Director
-    public static org.example.designpatterns.creationalpatterns.builderwithinnerclass.UserDTO directBuild(org.example.designpatterns.creationalpatterns.builderwithinnerclass.UserDTO.UserDTOBuilder builder, User user){
+    public static org.example.designpatterns.creationalpatterns.builderwithinnerclass.UserDTO directBuild(org.example.designpatterns.creationalpatterns.builderwithinnerclass.UserDTO.UserDTOBuilder builder, User user) {
         return builder.withFirstName(user.getFirstName())
                 .withLastName(user.getLastName())
                 .withBirthDay(user.getBirthDay())
@@ -36,7 +34,7 @@ public class Client {
                 .build();
     }
 
-    public static void demoBuilderWithInnerClass(){
+    public static void demoBuilderWithInnerClass() {
         User user = createUser();
 
         UserDTO userDTO = directBuild(org.example.designpatterns.creationalpatterns.builderwithinnerclass.UserDTO.getBuilder(), user);
